@@ -1,0 +1,212 @@
+---
+title: "Perspectives on computational analysis HW3"
+author: "Angela Zorro Medina"
+date: "10/24/2018"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+  word_document: default
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(plyr)
+```
+
+# Question 1
+
+**Simulation in Sociology, Moretti (2002). (3 points).** Read the paper, Moretti (2002), and write a one-to-two-page paper responding to the following questions. 
+
+\textbf{a)}The author discusses the role of simulation as a tool for exploring theory. She also highlights the importance of establishing validity of the simulative model of the theory. That is, validity is the degree to which the theoretical constructs and their computational implementation are representative of the real-world. What are some potential weaknesses in validity that the author describes with regard to multi-agent systems and cellular
+automata? \textbf{b)}The author highlights dynamic feedback as a key characteristic that computer simulation is good at modeling. Dynamic feedback is where some initial stimulus changes behavior, and then that change in behavior
+creates new stimuli which in turn cause further behavioral change. Give an example of a model that the author cites from Sociology that exhibits this characteristic. Come up with an example of a research question on a political science topic where the underlying system exhibits dynamic feedback.
+
+In her paper "Computer Simulation in Sociology," Sabrina Moretti explains the contribution of computer simulation to sociology, specifically dynamic systems. Dynamics systems simulations are a computational tool used to analyze complex systems that cannot be studied using traditional mathematical models.  In social sciences, computer simulations have been used to analyze the variables of a global system. Despite the benefits of using computational simulations, it has not been widely implemented in all areas of social sciences. On the contrary, while they have been successfully used in economics, they have been less successful in other fields, like global politics and international relationships. 
+
+The author explains two main concerns regarding the system dynamics that have caused that they have not been equally successful in the different fields of social sciences. The first problem refers to the fact that system dynamic models cannot be used to explain changes in the structure, these models can only explain changes inside a fixed dynamic structure. In social sciences like economics when you are studying the effect of a change in a variable into another these models become extremely useful, however in other subfields like sociology, in the cases where you are trying to explain the change in the structure itself these models cannot be very useful. 
+
+The second concern is related to the quantification of the model. The principal limitation to social sciences to be studied as natural sciences is that complex social phenomenon are difficult to quantify. Not all social variables have the same measurement problems, some variables can be easily translated into numeric values, especially in economics, but there are others that cannot be universally quantified. When we approach a variable that cannot be universally quantified, there is a large space for interpretation, and when we face interpretation subjectivity arise. As a consequence, the studies on those variables are not comparable, if one author A is defining x in a different way than author B, then the results of A and B cannot be compared. Moreover, even x is defined in the same way by author A and B; they could be measuring it differently. This second problem states the concern that computational simulations cannot evaluate if the model represents reality and the model cannot tell us the connection between theory and empirical data.
+
+The validity problem highlighted by the author can be observed closely by looking at the cellular automata and multi-agent models. The cellular automata tool allows making simulative models of biological evolution and self-reproduction. This model is based on homogenous agents that have determined positions in a specific framework. By assuming homogeneity in the behavior of agents and their modality of interactions, the cellular automata model ignores that individuals modified their attitudes, opinions, and behaviors at different moments.  Moreover, the cellular automata cannot overcome the validity problem by simply applying transitional rules at different moments because the construction of the groups that are going to make the transition at the same time still imposes important restrictions that do not reflect reality.
+
+Multi-agent models also have a validity problem. These models aim to simulate artificial intelligence that is capable of adapting itself to the external world. Multi-agent models must have a detailed list of rules of agents' behavior, like protocols of communication and decision-making procedures that consider environmental changes and the interactions with the other agents of the system. The definition of the set of rules is the main reason why these models have validity weaknesses. If multi-agent systems use a model of rationality that is not realistic or understandable, then it cannot reflect reality. In light of this, the success of the multi-agent system relies on our capacity to develop models of rationality that are realistic. On another aspect, the multi-agent model presents a second challenge related to the standardization of the variables that come from the psychological theory. To overcome this problem, we need to find a way to standardized emotions, motivations, desires, among others, to have comparable data and comparable conclusions. 
+
+To address the validity problem, the author suggests using an extension of the "Turing Test," proposed by Taber and Timpone (1996). According to this test, if the researcher cannot distinguish between the model behavior and the real behavior, then the model can be considered valid. By looking at the simulated data and comparing it with the correspondent real data, we can verify how far or how close is our model from reality. Ideally, we would not be able to identify which is the model and which is the real data because they are both identical. Although the "Turing Test" provides some guidelines to evaluate how our model is close to reality, it does not provide any useful information regarding the measurement problems. These problems cannot be addressed with a computational tool; a computer cannot explain us exactly what does in mean to be 3 in a sociability scale from 1 to 10 without a theoretical framework defining what 3 means. What we can achieve is a consensus that allows us to have the same metric scale when evaluating sociability, and for that computational tools can help us to include different dimensions that satisfy the different approaches.
+
+Despite the problematics highlighted above, the author explains that dynamic systems provide new opportunities to analyze the dynamics of social phenomena. Moretti explains the dynamic feedback is one of the most useful features of a dynamic system to understand changes in social life. One of the examples cited by Moretti to emphasize her point is the work of Reynolds in 1994 about cultural transmission. Moretti explains that Reynolds applies evolutionary theory to study the emergence of cooperation in a population of Peruvians herders. Reynolds uses genetic algorithms to see how the process of cooperation derived from different rules of crossover and mutation. 
+
+In conclusion, while Morelli highlights the problems and reasons why computational simulations have not been widely implemented across all fields in social sciences, it is clear that by using this method social research can analyze different social phenomenon in a way that was not possible before. The problematics presented in the paper are not minor. However, that does not mean that it is not a useful tool that can be used understanding the limitations it has. An interesting research question that can be addressed using this simulation method is, for example, the potential consequences of killing Jamal Khashoggi in the international relations between Saudi Arabia and the United States. The general underlying question is how "illegal" acts done by a member of a state can affect the international relations between different states when large amounts of capital investment are involved. This question could be addressed as the simulation done by Guetzkow (1959), and its results can help us to contribute to the theory of development in international relationships while giving us some guidelines on how members o the state should be trained to address these situations.
+
+**References**
+Guetzkow, H. (1959). A use of simulation in the study of inter-nation relations. Behavioral Science, 4(3), 183-191.
+Moretti, S. (2002). Computer simulation in sociology: What contribution?. Social Science Computer Review, 20(1), 43-57.
+Reynolds, R. G. (1994). Learning to co-operate using cultural algorithms. In J. Doran&G. N. Gilbert (Eds.), Simulating societies: The computer simulation of social phenomena (pp. 223-244). London: UCL Press.
+Taber, C. S., Timpone, R. J., & Timpone, R. J. (1996). Computational modeling (Vol. 113). Sage.
+
+# Question 2
+
+**Simulating your income (7 points)** Assume that all of you will graduate from MACSS program at the University of Chicago in June 2020. Your annual income from the time you graduate to the end of your life is generated by the following process,
+
+$$ln(inc_{2020})=\ln(inc_{0}) + \ln(\epsilon_{2020})$$
+$$ln(inc_{t})=(1-\rho)[\ln(inc_{0}) + g(t-2020)] + \rho\ln(inc_{t-1}) + ln(\epsilon_{t})$$
+
+for $$2021<=t<=2059$$
+
+where the variable $inco_{t}$ is your annual income in year t>=2020, $inco_{0}$ is the average starting income $(t=2018)$ for a MACSS student, $\rho???[0,1)$ reflects some positive dependence of today's income on last period's income, $g$ is a long-run annual growth rate for your annual salary, and $\epsilon_{t}$ is an error term that is distributed lognormal $LN(0,\sigma)$ where $\sigma$ is the standard deviation of the log of the error term. That is, $ln(\epsilon_{t})$ is distributed normal $N(0,\sigma)$.
+
+\textbf{a)}**(3 points)** Let the standard deviation of your income process be $\sigma=0.13$,let the persistence be $\rho=0.4$, let the long-run growth rate of income be $g=0.025$, and let average initial income be $inc_{0}=80,000$. Assume you will work for 40 years after you graduate (2020 to 2059). Simulate 10,000 different realizations of your lifetime income. Do this by first drawing 10,000 sets of 40 normally distributed errors with mean 0 and standard
+deviation $\sigma=0.13$. Then plug those into the income process (1) to simulate your lifetime income. Plot one of the lifetime income paths. Make sure your axes are correctly labeled and your plot has a title.
+
+```{r echo=FALSE}
+###The first step to simulate data is to create a function of that defines your data generating process
+#First, definig errors of n sets of years normally distributed errors with mean 0 and std sigma=0.13
+#Define a the function that is going to be use to simulate income
+income_angela<- function(base_inc, sigma, rho, g, a_years,  start_year=2020){
+#Define errors normally distributed
+a_error<- rnorm(a_years,mean = 0, sd=sigma)
+#Define vector of ln_income for 40 years
+income_log_angela<- vector("numeric", a_years)
+#Use a loop to define the process (the process is the income generation-the equation 1)
+for (year in seq_len(a_years)){
+ if (year==1){
+   income_log_angela[[year]] <- log(base_inc) + a_error[[year]]
+    } else {
+       income_log_angela[[year]] <- (1-rho)*(log(base_inc) +g*(year))+ rho*(income_log_angela[[year-1]]) + a_error[[year]]
+   }
+}
+
+#Translate the log values into income (apply exponential function to get rid of the ln)
+# and also translates the corresponding year that goes along with that simulated income
+data.frame(inc=exp(income_log_angela),
+            year=2020 + seq_len(a_years)-1)
+}
+
+###After defining the function, we plug in the errors defined before into the income process we defined to simulate the lifetime income at the end of the previous chunck
+#Create a function to calculate increasing annual income
+
+n_sims <-10000
+n_years <-40
+
+
+#Now use the function rerun to simulate data iterations and then create a data frame
+
+library(magrittr)
+library(tidyverse)
+simulated_income_angela <-n_sims %>%
+
+  #In rerun() we define the parameters
+rerun(income_angela(base_inc = 80000, sigma = .13, rho = .4, g=.025, a_years=n_years, start_year = 2020)) %>%
+
+#Use the command bind_rows() to create a data frame
+bind_rows(.id="id") %>%
+#id will define which simulation are we looking at
+select (id,year,inc)
+
+#We want to view the data we created
+View(simulated_income_angela)
+head(simulated_income_angela)
+
+# Plot the first income path. Id is the variable that defines which simulated income path.
+simulated_income_angela %>%
+  filter(id == 1) %>%
+  ggplot(aes(year, inc)) +
+  geom_line() +
+  labs(title = "Simulated income increase over time (one simulation)",
+       x = "Year", 
+       y = "Annual Income") +
+  scale_y_continuous(labels = scales::dollar)
+
+```
+
+b)**(1 points)** Plot a histogram with 50 bins of year t=2020 initial income for each of the 10,000 simulations. What percent of your class will earn more than 100,000 in the first year out of the program? What percent of the class will earn less than 70,000? Is the distribution normally distributed (i.e., symmetric and bell curved)?
+
+```{r echo=FALSE}
+
+max_inc <- tapply (simulated_income_angela$inc,simulated_income_angela$year, max)
+min_inc <- tapply (simulated_income_angela$inc,simulated_income_angela$year, min)
+cbind(max_inc, min_inc)
+
+
+par(mfrow=c(1, 2))
+histogram <-hist(simulated_income_angela$inc[simulated_income_angela$year==2020], breaks=50, main="Income 50 breaks 2020", xlab="income",col="green")
+
+perct_below_70000<- (sum(histogram$counts[histogram$breaks<=70000])/10000)
+perct_above_100000<- ((10000-sum(histogram$counts[histogram$breaks<=100000]))/10000)
+cbind(perct_below_70000, perct_above_100000)
+
+```
+From the histrogram we can observe that the distribution follows a symmetric an curve bell, which means it follows a normal distribution.
+
+c)**(2 points)**Suppose you graduate from the MACSS program with $95,000 of zero-interest debt. You will use 10% of your annual salary after you graduate to pay of this loan. Plot the histogram of how many years it takes to pay of the loan in each of your 10,000 simulations. This histogram will only have as many bins as you have unique years in which people pay of their debt. In what percent of the simulations are you able to pay of the loan in 10 years (on or before t = 2029)?
+
+```{r echo=FALSE}
+#We create the variable 10% of incomes
+simulated_income_angela$Income_10 <- simulated_income_angela$inc*.1
+simulated_income_angela$payment1<- ave(simulated_income_angela$Income_10, simulated_income_angela$id, FUN=cumsum)
+#We create the cumulative sum of payment
+library(dplyr)
+payment2<- filter(simulated_income_angela, simulated_income_angela$payment1>=95000)
+
+
+#We keep the min year
+library(data.table)
+payment_year<-setDT(payment2)[, .SD[which.min(year)], by = id]
+par(mfrow=c(1, 2))
+histogram_payment <-hist(payment_year$year, main="Year in which Debt is pay", xlab="year",col="blue")
+
+#Below and above 2029
+payment_prior_2029<- (sum(histogram_payment$counts[histogram_payment$breaks<=2029])/10000)
+payment_post_2029<- ((10000-sum(histogram_payment$counts[histogram_payment$breaks<=2029]))/10000)
+cbind(payment_prior_2029, payment_post_2029)
+
+```
+
+
+(d) **(1 points)** Now suppose that the Chicago MACSS program becomes very well known in the next two years, and the skills you are learning are demanded more by employers. This increases the average starting salary to inc0 = 90000,but the standard deviation in incomes increases also to 0,17. Plot the new histogram of how many years it takes to pay of your loan of 95,000 in your new 10,000 simulations with the new standard deviation and the new average initial salary. In what percent of the simulations are you able to pay off the loan in 10 years (on or before t = 2029)?
+```{r echo=FALSE}
+###After defining the function, we plug in the errors defined before into the income process we defined to simulate the lifetime income at the end of the previous chunck
+#Create a function to calculate increasing annual income
+
+n_sims1 <-10000
+n_years1 <-40
+
+
+#Now use the function rerun to simulate data iterations and then create a data frame
+
+library(magrittr)
+library(tidyverse)
+simulated_income_angela1 <-n_sims1 %>%
+
+  #In rerun() we define the parameters
+rerun(income_angela(base_inc = 90000, sigma = .17, rho = .4, g=.025, a_years=n_years, start_year = 2020)) %>%
+
+#Use the command bind_rows() to create a data frame
+bind_rows(.id="id") %>%
+#id will define which simulation are we looking at
+select (id,year,inc)
+
+#We want to view the data we created
+View(simulated_income_angela1)
+head(simulated_income_angela1)
+
+#We create the variable 10% of incomes
+simulated_income_angela1$Income_10 <- simulated_income_angela1$inc*.1
+simulated_income_angela1$payment1<- ave(simulated_income_angela1$Income_10, simulated_income_angela1$id, FUN=cumsum)
+#We create the cumulative sum of payment
+library(dplyr)
+payment2_1<- filter(simulated_income_angela1, simulated_income_angela1$payment1>=95000)
+
+#We keep the min year
+library(data.table)
+payment_year1<-setDT(payment2_1)[, .SD[which.min(year)], by = id]
+par(mfrow=c(1, 2))
+histogram_payment1 <-hist(payment_year1$year, main="Year in which Debt is pay", xlab="year",col="blue")
+
+#Below and above 2029
+payment_prior_20291<- (sum(histogram_payment1$counts[histogram_payment1$breaks<=2029])/10000)
+payment_post_20291<- ((10000-sum(histogram_payment1$counts[histogram_payment1$breaks<=2029]))/10000)
+cbind(payment_prior_20291, payment_post_20291)
+```
